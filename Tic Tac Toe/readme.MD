@@ -4,15 +4,17 @@ The aim of the project was to develop a distributed Tic Tac Toe, in a client-ser
 You can think of the server as moderator conducting the game. The server will be maintaining the state of the game and also the server will be one providing APIs to inquire or change the state of board.
 Clients will be the player, which will inquire or play their chance by remotely calling the server APIs.
 
-##Conduct
-###Server-Client Relationship
+## Conduct
+
+### Server-Client Relationship
 1. Server will be up always.
 2. User will deal only with client. User should be prompted to start the game. As
 soon as she wants to play, client should connect to server prompting to join the
 game.
 3. At a time, only two clients can be connected to server. The server should send a
 Busy/Wait message in case third client wants to connect.
-###Game Play
+
+### Game Play
 1. When first client connects, the server should wait for the second client to connect and send a corresponding message to the first client.
 2. As soon as second client connects, it assigns player1/player2 randomly to the two clients and should start the game. Player 1 has ‘x’ marker and Player 2 has ‘o’ marker.
 3. Whichever player has to make a move will receive the current state of the board from the server and other player will wait for the other player to make a move. Respective messages should be displayed for both.
@@ -27,7 +29,7 @@ d. Both should be prompted with “Play another game?” message. If both
 agrees, fresh game should start else both the clients disconnect and
 close.
 
-###Input/Output
+### Input/Output
 1. Please follow the input/output guidelines for smooth evaluation.
 2. Server will not output anything.
 3. When client runs, it should prompt the user if she wants to join the game.
